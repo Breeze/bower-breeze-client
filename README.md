@@ -41,4 +41,10 @@ The "build" directory holds the scripts generated from the core Breeze sources.
 
 This package **does not include the Breeze Labs**.
 
-**Breeze Labs**
+[**Breeze Labs**](http://www.getbreezenow.com/documentation/what-are-breeze-labs) are experimental libraries and not part of the Breeze core.
+
+They are packaged separately as [**breeze-client-labs**](https://github.com/Breeze/breeze.js.labs.git) [Coming soon]
+
+>The former Breeze Labs script "breeze.angular.js" has been promoted to a Breeze core adapter and given a new name, ***breeze.bridge.angular.js***.
+>
+>You ***will* find it in this package** in the "**adapters**" directory.
