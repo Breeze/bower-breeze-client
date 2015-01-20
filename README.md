@@ -15,18 +15,7 @@ To install with bower, open a terminal or command window and enter:
 The most widely used Breeze client library is "breeze.debug.js". It conbines both the
 base Breeze functionality and the default adapters for Knockout and Angular applications.
 
->but not the "breeze.bridge.angular" adapter used by most Angular apps. See next.
-
-### adapters
-The "adapters" directory holds scripts for every core Breeze adapter. Adapters implement breeze feature-extension-points for specific application environments.  For example, the "breeze.ajax.jQuery.js" script provides a jQuery implementation of
-the Breeze "ajax" interface for communicating with remote services via XMLHttpRequest (XHR).
-
-Some of these adapters (like "breeze.ajax.jQuery.js") are embedded in
-"breeze.debug.js". You should not load them again if you're loading "breeze.debug.js".
-
-Others (like "breeze.bridge.angular" and "breeze.modelLibrary.backbone.js") are not embedded. You will have to load these adapter scripts separately if you need their capabilities.
-
-If you choose to run with "breeze.**base**.debug.js" instead of "breeze.debug.js" (see next), you must load *every* required adapter script separately.
+>but not the "breeze.bridge.angular" adapter used by most Angular apps. See below.
 
 ### build
 
@@ -36,6 +25,21 @@ The "build" directory holds the scripts generated from the core Breeze sources.
 * **breeze.base.debug.js** - the base client library without any adapters.
 * **breeze.min.js** - the minified default client library.
 * **breeze.base.min.js** - the minified base client library.
+
+It also holds the breeze adapters in a separate subdirectory.
+
+### build/adapters
+The "build/adapters" directory contains scripts for every core Breeze adapter.
+
+Adapters implement breeze feature-extension-points for specific application environments.  For example, the "breeze.ajax.jQuery.js" script provides a jQuery implementation of
+the Breeze "ajax" interface for communicating with remote services via XMLHttpRequest (XHR).
+
+Some of these adapters (like "breeze.ajax.jQuery.js") are embedded in
+"breeze.debug.js". You should not load them again if you're loading "breeze.debug.js".
+
+Others (like "breeze.bridge.angular.js" and "breeze.modelLibrary.backbone.js") are not embedded. You will have to load these adapter scripts separately if you need their capabilities.
+
+If you choose to run with "breeze.**base**.debug.js" instead of "breeze.debug.js", you must load *every* required adapter script separately.
 
 ## No Breeze Labs!
 
@@ -47,4 +51,4 @@ They are packaged separately as [**breeze-client-labs**](https://github.com/Bree
 
 >The former Breeze Labs script "breeze.angular.js" has been promoted to a Breeze core adapter and given a new name, ***breeze.bridge.angular.js***.
 >
->You ***will* find it in this "breeze-client" package** in the "**adapters**" directory.
+>You ***will* find it in this "breeze-client" package** in the "**build/adapters**" directory.

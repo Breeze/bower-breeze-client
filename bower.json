@@ -25,7 +25,6 @@
     "**.*",
     "!breeze.debug.js",
     "!README.md",
-    "!adapters/**/*.*",
     "!build/**/*.*"
   ]
 }
