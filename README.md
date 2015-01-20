@@ -1,6 +1,6 @@
-# The "breeze-client" package
+# The "breeze-client" bower package
 
-This is the official package for the Breeze core client-side libraries, drawn from sources in the [home repository on github](https://github.com/Breeze/breeze.js "github: breeze.js").
+This is the official bower package for the Breeze core client-side libraries. The package files are in the [bower-breeze-client](https://github.com/Breeze/bower-breeze-client "github: bower-breeze-client") which is built from the original source files in the [breeze.js](https://github.com/Breeze/breeze.js "github: breeze.js") repository.
 
 To install with bower, open a terminal or command window and enter:
 
@@ -47,4 +47,4 @@ They are packaged separately as [**breeze-client-labs**](https://github.com/Bree
 
 >The former Breeze Labs script "breeze.angular.js" has been promoted to a Breeze core adapter and given a new name, ***breeze.bridge.angular.js***.
 >
->You ***will* find it in this package** in the "**adapters**" directory.
+>You ***will* find it in this "breeze-client" package** in the "**adapters**" directory.
