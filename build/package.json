@@ -1,0 +1,23 @@
+{
+  "name": "bower-breeze-client",
+  "version": "1.5.3",
+  "description": "Breeze bower build dependencies ",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "www.breezejs.com",
+  "author": {
+    "name": "Jay Traband",
+    "email": "jayt@ideablade.com"
+  },
+  "engines": {
+    "node": ">= 0.6.6"
+  },
+  "devDependencies": {
+    "event-stream": "^3.2.1",
+    "gulp": "^3.8.7",
+    "gulp-changed": "^1.0.0",
+    "gulp-shell": "^0.2.9"
+  }
+}

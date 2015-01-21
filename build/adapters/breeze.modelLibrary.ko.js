@@ -1,4 +1,4 @@
-﻿(function (factory) {
+(function (factory) {
   if (typeof breeze === "object") {
     factory(breeze);
   } else if (typeof require === "function" && typeof exports === "object" && typeof module === "object") {
@@ -10,14 +10,9 @@
   }
 }(function (breeze) {
   "use strict";
-  var canIsolateES5Props = function () {
-    try {
-      return !!(Object.getPrototypeOf && Object.defineProperty({}, 'x', {}));
-    } catch (e) {
-      return false;
-    }
-  }();
   var core = breeze.core;
+  var canIsolateES5Props = core.__isES5Supported;
+
   var ko;
 
   var ctor = function ModelLibraryKnockoutAdapter() {

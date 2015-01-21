@@ -1,26 +1,17 @@
-﻿/*
- * Breeze Angular Module and "breeze service"
+/*
+ * Breeze Angular Module ("breeze.angular") containing the "breeze" service
+ * for preparing breeze applications to work with angular.
  *
- * v.1.0.0
- *
- * A "breeze service" that tells Breeze to
+ * The "breeze" that tells Breeze to
  * - use $q for its promises rather than Q.js
  * - use $http for AJAX calls.
  *
- * Consequently Breeze no longer requires the jQuery or the Q.js libraries
- * although non-Breeze code in your app may require either or both.
- *
- * The object returned by the "breeze service" is the global 'window.breeze' object
- *
- * Copyright 2014 IdeaBlade, Inc.  All Rights Reserved.
- * Licensed under the MIT License
- * http://opensource.org/licenses/mit-license.php
- * Author: Ward Bell
+ * The object returned by the service is the breeze client object
  *
  * Implemented with an Angular provider so that you
  * can configure some of Breeze during the launch 'config' phase.
  *
- * However, you must at least depend on this service during the 'run' phase
+ * However, you must at least depend on this service after the angular config phase
  * so that Breeze can learn about the $q and $http services for the app
  * as these services only become available during the 'run' phase.
  *

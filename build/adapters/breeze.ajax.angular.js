@@ -1,4 +1,4 @@
-﻿// Angular ajax adapter
+// Angular ajax adapter
 // See https://docs.angularjs.org/api/ng/service/$http
 (function (factory) {
   // Module systems magic dance.

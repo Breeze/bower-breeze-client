@@ -1,4 +1,4 @@
-﻿// jQuery ajax adapter ( JQuery v.>=1.5 )
+// jQuery ajax adapter ( JQuery v.>=1.5 )
 // see https://api.jquery.com/jQuery.ajax/
 (function (factory) {
   // Module systems magic dance.
