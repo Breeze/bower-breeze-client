@@ -1,4 +1,4 @@
-// Build for breeze.server.node-breeze-client
+// Build for bower-breeze-client
 
 var gulp    = require('gulp');
 var changed = require('gulp-changed');
