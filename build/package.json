@@ -1,6 +1,6 @@
 {
   "name": "bower-breeze-client",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Breeze bower build dependencies ",
   "main": "",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "event-stream": "^3.2.1",
-    "gulp": "^3.8.7",
+    "gulp": "^3.8.11",
     "gulp-changed": "^1.0.0",
     "gulp-shell": "^0.2.9"
   }
