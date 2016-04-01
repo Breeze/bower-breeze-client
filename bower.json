@@ -1,6 +1,6 @@
 {
   "name": "breeze-client",
-  "version": "1.5.4",
+  "version": "1.5.6",
   "description": "Breeze is a JavaScript library that helps you manage data in rich client applications. If you store data in a database, query and save those data as complex object graphs, and share these graphs across multiple screens of your JavaScript client, Breeze is",
   "keywords": [
     "breeze",
@@ -20,7 +20,7 @@
     "type": "git",
     "url": "https://github.com/Breeze/bower-breeze-client"
   },
-  "main": ["breeze.debug.js"],
+  "main": "breeze.debug.js",
   "ignore": [
     "**.*",
     "!breeze.debug.js",

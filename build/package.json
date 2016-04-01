@@ -1,6 +1,6 @@
 {
   "name": "bower-breeze-client",
-  "version": "1.5.4",
+  "version": "1.5.6",
   "description": "Breeze bower build dependencies ",
   "main": "",
   "scripts": {
@@ -11,6 +11,11 @@
     "name": "Jay Traband",
     "email": "jayt@ideablade.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Breeze/bower-breeze-client.git"
+  },
+  "license": "MIT",
   "engines": {
     "node": ">= 0.6.6"
   },
