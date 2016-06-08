@@ -1,4 +1,4 @@
-// Generated on: Thu Mar 31 2016 13:27:20 GMT-0700 (Pacific Daylight Time)
+// Generated on: Wed Jun 08 2016 16:35:07 GMT-0700 (Pacific Daylight Time)
 intellisense.annotate(breeze.core, {
   'Enum': function() {
     /// <signature>
@@ -1113,7 +1113,7 @@ intellisense.annotate(breeze.breeze.EntityState.prototype, {
     /// <signature>
     ///   <summary>
     ///   </summary>
-    ///   <returns type="Boolean" >Whether an entityState instance is EntityState.Unchanged or EntityState.Modified or EntityState.Deleted.</returns>
+    ///   <returns type="Boolean" >Whether an entityState instance is EntityState.Added or EntityState.Modified or EntityState.Deleted.</returns>
     /// </signature>
   },
 });
@@ -2112,6 +2112,10 @@ intellisense.annotate(breeze.breeze.FilterQueryOp, {
   'Any': null,
   /// <field name="All" type="breeze.breeze.FilterQueryOp" >Aliases: 'every'</field>
   'All': null,
+  /// <field name="In" type="breeze.breeze.FilterQueryOp" ></field>
+  'In': null,
+  /// <field name="IsTypeOf" type="breeze.breeze.FilterQueryOp" ></field>
+  'IsTypeOf': null,
 });
 intellisense.annotate(breeze.breeze.MergeStrategy.prototype, {
 
