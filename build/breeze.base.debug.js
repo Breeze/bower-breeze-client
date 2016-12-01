@@ -23,7 +23,7 @@
 })(this, function (global) {
     "use strict"; 
     var breeze = {
-        version: "1.5.16",
+        version: "1.6.0",
         metadataVersion: "1.0.5"
     };
     ;/**
@@ -6333,6 +6333,7 @@ var JsonResultsAdapter = (function () {
         .whereParam("extractResults").isFunction().isOptional().withDefault(extractResultsDefault)
         .whereParam("extractSaveResults").isFunction().isOptional().withDefault(extractSaveResultsDefault)
         .whereParam("extractKeyMappings").isFunction().isOptional().withDefault(extractKeyMappingsDefault)
+        .whereParam("extractDeletedKeys").isFunction().isOptional().withDefault(extractDeletedKeysDefault)
         .whereParam("visitNode").isFunction()
         .applyAll(this);
     __config._storeObject(this, proto._$typeName, this.name);
@@ -6348,9 +6349,13 @@ var JsonResultsAdapter = (function () {
   function extractSaveResultsDefault(data) {
     return data.entities || data.Entities || [];
   }
-
+  
   function extractKeyMappingsDefault(data) {
     return data.keyMappings || data.KeyMappings || [];
+  }
+
+  function extractDeletedKeysDefault(data) {
+    return data.deletedKeys || data.DeletedKeys || [];
   }
 
   return ctor;
@@ -13981,8 +13986,8 @@ var EntityManager = (function () {
     function processSavedEntities(saveResult) {
 
       var savedEntities = saveResult.entities;
-
-      if (savedEntities.length === 0) {
+      var deletedKeys = saveResult.deletedKeys || [];
+      if (savedEntities.length === 0 && deletedKeys.length == 0) {
         return [];
       }
       var keyMappings = saveResult.keyMappings;
@@ -14004,6 +14009,17 @@ var EntityManager = (function () {
         // the save operation did not actually return the entity - i.e. during OData and Mongo updates and deletes.
         savedEntities = mappingContext.visitAndMerge(savedEntities, { nodeType: "root" });
       });
+
+      // detach any entities found in the em that appear in the deletedKeys list. 
+      
+      deletedKeys.forEach(function(key) {
+        var entityType = em.metadataStore._getEntityType(key.entityTypeName);
+        var ekey = new EntityKey(entityType, key.keyValues);
+        var entity = em.findEntityByKey(ekey);
+        if (entity) {
+          entity.entityAspect.setDetached();
+        }
+      })
 
       return savedEntities;
     }
